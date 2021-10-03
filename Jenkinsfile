@@ -33,7 +33,7 @@ pipeline {
           }
         }
 
-        stage('') {
+        stage('error') {
           steps {
             echo 'This will run performance test'
           }
@@ -57,6 +57,7 @@ pipeline {
     stage('UAT certificates') {
       steps {
         echo 'manual approval'
+        input 'QA approval needed..'
       }
     }
 
